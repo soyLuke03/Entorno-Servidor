@@ -1,0 +1,20 @@
+Como hacer un login:
+
+	-session.invalidate() : esto borra la sesión activa.
+	
+	Se inicia con: 
+		-<variable de password>
+		-<variable de user>
+
+		HttpSession <nombre> = request.getSession();
+		<nombre>.setAttribute("login","True");
+		<nombre>.setAttribute("usuario",<nombreUser>);
+		<jsp:forward page="<nombrePagina>"></jsp forward>
+
+	===
+		-HttpSession <nombre> = request.getSession();
+		String <nombreLog> = (String) <nombre>.getAttribute("login");
+		String <nombreUser> = (String) <nombre>.getAttribute("usuario");
+	
+
+Usar "error.jsp?msg="<mensaje>" para cambiar el mensaje de la pagina de error

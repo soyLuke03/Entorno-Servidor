@@ -1,0 +1,15 @@
+CREATE TABLE Usuario (
+	id int(10) PRIMARY KEY,
+	nombre varchar(50),
+	idProducto int(10)
+);
+
+
+
+create table Producto (
+	id int(10) primary key,
+	nombreItem varchar(50),
+	idUsuario int(10),
+	
+	constraint FK_producto foreign key (idUsuario) references Usuario (id)
+);
